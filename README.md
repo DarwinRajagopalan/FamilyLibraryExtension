@@ -1,8 +1,3 @@
-Here is your document rewritten in **simple + clear English** 👇
-(I kept all meaning same, but made sentences easier to understand)
-
----
-
 # 📄 Autodesk ACC Multi-Download Tool (Simple Guide)
 
 ## 1. What is this tool?
