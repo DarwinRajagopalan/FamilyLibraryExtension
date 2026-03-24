@@ -1,0 +1,13 @@
+[2025-12-05T13:00:30.152Z] Failed: TypeError: page.waitForTimeout is not a function
+    at runProcess (C:\Users\Herman\Projects\2025\Nov\AutoDesk_Multi_Download\index.js:285:18)
+    at async C:\Users\Herman\Projects\2025\Nov\AutoDesk_Multi_Download\index.js:292:23
+[2025-12-05T13:00:30.154Z] unhandledRejection TypeError: page.waitForTimeout is not a function
+    at runProcess (C:\Users\Herman\Projects\2025\Nov\AutoDesk_Multi_Download\index.js:285:18)
+    at async C:\Users\Herman\Projects\2025\Nov\AutoDesk_Multi_Download\index.js:292:23
+[2025-12-06T04:16:50.398Z] Failed: SyntaxError: Unexpected identifier 'code'
+    at #evaluate (C:\snapshot\AutoDesk_Multi_Download\node_modules\puppeteer-core\lib\cjs\puppeteer\cdp\ExecutionContext.js:391:56)
+    at async ExecutionContext.evaluate (C:\snapshot\AutoDesk_Multi_Download\node_modules\puppeteer-core\lib\cjs\puppeteer\cdp\ExecutionContext.js:277:16)
+    at async IsolatedWorld.evaluate (C:\snapshot\AutoDesk_Multi_Download\node_modules\puppeteer-core\lib\cjs\puppeteer\cdp\IsolatedWorld.js:100:16)
+    at async CdpFrame.evaluate (C:\snapshot\AutoDesk_Multi_Download\node_modules\puppeteer-core\lib\cjs\puppeteer\api\Frame.js:362:20)
+    at async CdpPage.evaluate (C:\snapshot\AutoDesk_Multi_Download\node_modules\puppeteer-core\lib\cjs\puppeteer\api\Page.js:818:20)
+    at async C:\snapshot\AutoDesk_Multi_Download\index.js

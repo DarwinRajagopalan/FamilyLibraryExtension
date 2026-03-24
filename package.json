@@ -1,0 +1,44 @@
+{
+  "name": "autodesk_multi_download",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "bin": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "pkg": "pkg ."
+  },
+  "pkg": {
+    "scripts": [
+      "utils/utils.js",
+      "utils/download_manager.js",
+      "utils/startChromeBrowser.js"
+    ],
+    "targets": [
+      "node18-win-x64"
+    ],
+    "outputPath": ".",
+    "assets": [
+      "node_modules/puppeteer-core/lib/**/*.js"
+    ]
+  },
+  "build": {
+    "appId": "com.example.myapp",
+    "win": {
+      "target": "nsis"
+    }
+  },
+  "dependencies": {
+    "archiver": "^7.0.1",
+    "axios": "^1.13.2",
+    "fs-extra": "^11.3.2",
+    "puppeteer-core": "^24.31.0"
+  },
+  "devDependencies": {
+    "electron": "^39.2.4"
+  }
+}

@@ -1,0 +1,34 @@
+1. open the `Windows Icon + R`
+2. paste the cmd line: 
+   "C:\Program Files\Google\Chrome\Application\chrome.exe" --remote-debugging-port=9222 --user-data-dir="C:\Users\YourUser\AppData\Local\Google\Chrome\User Data"
+3. OR Run this cmd in powerShell:
+   & "C:\Program Files\Google\Chrome\Application\chrome.exe" --remote-debugging-port=9222 --user-data-dir="C:\Temp\Chrome-Automation-Profile" --no-first-run
+4. Login the or Gmail account
+5. run this code to check the connection
+   // index.js
+    const puppeteer = require('puppeteer-core');
+    (async () => {
+    try {
+        const resp = await fetch('http://127.0.0.1:9222/json/version');
+        const json = await resp.json();
+        const ws = json.webSocketDebuggerUrl;
+        const browser = await puppeteer.connect({ browserWSEndpoint: ws, defaultViewport: null });
+        const page = await browser.newPage();
+        await page.goto('https://google.com');
+        console.log('Connected and opened google.com');
+        await browser.disconnect();
+    } catch (err) {
+        console.error('Failed to connect to Chrome:', err);
+        process.exit(1);
+    }
+    })();
+
+6.  npm install -g pkg
+// add this line in pakage
+  "build": {
+    "appId": "com.example.myapp",
+    "win": { "target": "nsis" }
+  }
+  // then, past this command in the terminal
+  npx pkg index.js --targets node18-win-x64 --output app.exe
+  npm run pkg
